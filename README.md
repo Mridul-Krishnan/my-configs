@@ -1,3 +1,7 @@
+
+# Terminal Emulator
+ Use Catpuccino Mocha theme.
+
 # Tmux Setup Notes
 
 ## Config
