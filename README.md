@@ -1,7 +1,7 @@
 # Terminal Emulator
  Use Catpuccino Mocha theme.
 # For ps1
-export PS1="\[\e[48;5;183m\e[38;5;235m\] \u \[\e[48;5;110m\e[38;5;183m\]\[\e[38;5;235m\] \h \[\e[48;5;115m\e[38;5;110m\]\[\e[38;5;235m\] \w \[\e[0m\e[38;5;115m\]\[\e[0m\] \$ "
+export PS1="\e[48;5;183m\e[38;5;235m \u \e[48;5;110m\e[38;5;183m\e[38;5;235m \h \e[48;5;115m\e[38;5;110m\e[38;5;235m \w \e[0m\e[38;5;115m$ "
 
 # Bash
 Use ble.sh
