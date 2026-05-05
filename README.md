@@ -19,13 +19,14 @@ function Get-GitBranch {
 
      Write-Host " $user " -BackgroundColor Magenta  -ForegroundColor DarkGray -NoNewline
      Write-Host " $host_ " -BackgroundColor Blue     -ForegroundColor DarkGray -NoNewline
-     Write-Host " $path " -BackgroundColor DarkGreen -ForegroundColor DarkGray -NoNewline
+     Write-Host " $path" -BackgroundColor DarkGreen -ForegroundColor DarkGray -NoNewline
 
      $branch = Get-GitBranch
      if ($branch) {
          Write-Host $branch -BackgroundColor DarkYellow -ForegroundColor DarkGray -NoNewline
      }
-  
+     "`b"
+     Write-Host " > " -ForegroundColor Green -NoNewline
  }
 ```
 # Bash
