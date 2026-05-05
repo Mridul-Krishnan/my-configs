@@ -1,8 +1,33 @@
 # Terminal Emulator
  Use Catpuccino Mocha theme.
 # For ps1
-export PS1="\e[48;5;183m\e[38;5;235m \u \e[48;5;110m\e[38;5;183m\e[38;5;235m \h \e[48;5;115m\e[38;5;110m\e[38;5;235m \w \e[0m\e[38;5;115m$ "
+## Basic for bash, refer to .bashrc for git branch version
+export PS1="\e[48;5;183m\e[38;5;235m \u \e[48;5;110m\e[38;5;183m\e[38;5;235m \h \e[48;5;115m\e[38;5;110m\e[38;5;235m \w \e[0m\e[38;5;115m$ " 
+## For powershell
+notepad $PROFILE
+Paste
+```shell
+function Get-GitBranch {
+     $branch = git branch 2>$null | Where-Object { $_ -match '^\*' } | ForEach-Object { $_ -replace '^\* ', '' }
+     if ($branch) { return " $branch " }
+ }
 
+ function prompt {
+     $user    = $env:USERNAME
+     $host_   = $env:COMPUTERNAME
+     $path    = $executionContext.SessionState.Path.CurrentLocation
+
+     Write-Host " $user " -BackgroundColor Magenta  -ForegroundColor DarkGray -NoNewline
+     Write-Host " $host_ " -BackgroundColor Blue     -ForegroundColor DarkGray -NoNewline
+     Write-Host " $path " -BackgroundColor DarkGreen -ForegroundColor DarkGray -NoNewline
+
+     $branch = Get-GitBranch
+     if ($branch) {
+         Write-Host $branch -BackgroundColor DarkYellow -ForegroundColor DarkGray -NoNewline
+     }
+  
+ }
+```
 # Bash
 Use ble.sh
 
