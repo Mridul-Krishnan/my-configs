@@ -64,7 +64,7 @@ force_color_prompt=yes
 # unset color_prompt force_color_prompt
 parse_git_branch() {
    branch=$(git branch 2>/dev/null | grep '^\*' | sed 's/\* //')
-   [ -n "$branch" ] && echo "($branch)"
+   [ -n "$branch" ] && echo "(⎇ branch)"
 }
 PS1='\e[48;5;183m\e[38;5;235m \u\e[48;5;110m\e[38;5;183m\e[38;5;235m\h\e[48;5;115m\e[38;5;110m\e[38;5;235m\w\e[0m\e[38;5;115m$(parse_git_branch)\e[0m\e[38;5;115m$\e[0m '
 
